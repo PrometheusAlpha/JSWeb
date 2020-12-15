@@ -168,7 +168,7 @@ nav .opened .line3 {
     opacity: 1 !important;
   }
   input:checked ~ .navbar ul {
-    height: 100vh;
+    height: 60vh;
   }
   input:checked ~ .navbar ul li {
     position: relative;
