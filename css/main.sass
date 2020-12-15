@@ -1,0 +1,122 @@
+body
+    margin: 0
+    padding: 0
+    overflow-x: hidden
+nav
+    position: fixed
+    input
+        display: none
+    label
+        position: absolute
+        top: 5px
+        left: 5px
+        width: 20px
+        height: 20px
+        padding: 5px
+        font-size: 1.5rem
+        cursor: pointer
+        z-index: 2
+        transition: .2s ease-in-out
+        opacity: 0
+        svg
+            height: 20px
+            width: 20px
+    .line
+        fill: none
+        stroke: black
+        stroke-width: 6
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1)
+
+    .line1
+        stroke-dasharray: 60 207
+        stroke-width: 6
+
+    .line2
+        stroke-dasharray: 60 60
+        stroke-width: 6
+
+    .line3
+        stroke-dasharray: 60 207
+        stroke-width: 6
+
+    .opened .line1
+        stroke-dasharray: 90 207
+        stroke-dashoffset: -134
+        stroke-width: 6
+
+    .opened .line2
+        stroke-dasharray: 1 60
+        stroke-dashoffset: -30
+        stroke-width: 6
+
+    .opened .line3
+        stroke-dasharray: 90 207
+        stroke-dashoffset: -134
+        stroke-width: 6
+.navbar
+    width: 99vw
+    height: 3rem
+    background: rgba(240, 240, 240, .7)
+    backdrop-filter: saturate(180%) blur(40px)
+    position: relative
+    transition: .2s ease-out
+    div
+        margin-left: 4vw
+        margin-right: 4vw
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        #logo
+            text-decoration: none
+            color: black
+        ul
+            margin: auto
+            padding: 0
+            margin: 0
+            width: 80%
+            list-style: none
+            text-align: center
+            li
+                padding-left: calc(30px + 5vw)
+                display: inline
+                transition: .3s ease-in
+                a
+                    color: #555
+                    text-decoration: none
+                a:hover
+                    color: #000
+.landing
+    img
+        margin-top: 3rem
+        width: 100vw
+        height: auto
+@media only screen and (max-width: 800px)
+    .navbar
+        ul
+            position: absolute
+            top: 3rem
+            left: 0
+            right: 0
+            overflow: hidden
+            display: flex
+            height: 0
+            flex-direction: column
+            width: 100vw !important
+            background-color: white
+            transition: .3s ease-in
+            li
+                text-align: left
+            a
+                padding: 0.5rem 0
+                margin-right: calc(30px + 5vw)
+                display: block
+                border-bottom: 1px solid #dddddd
+    label
+        opacity: 1 !important
+    input:checked ~ .navbar
+        ul
+            height: 100vh
+            li
+                position: relative
+                text-align: left
