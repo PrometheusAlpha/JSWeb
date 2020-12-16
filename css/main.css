@@ -15,25 +15,19 @@ nav input {
 
 nav label {
   position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  font-size: 1.5rem;
+  top: 9px;
+  left: 8px;
   cursor: pointer;
   z-index: 2;
-  -webkit-transition: .2s ease-in-out;
-  transition: .2s ease-in-out;
   opacity: 0;
 }
 
 nav label svg {
-  height: 20px;
-  width: 20px;
+  height: 30px;
+  width: 30px;
 }
 
-nav .line {
+nav label svg .line {
   fill: none;
   stroke: black;
   stroke-width: 6;
@@ -41,17 +35,17 @@ nav .line {
   transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-nav .line1 {
+nav label svg .line1 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
 }
 
-nav .line2 {
+nav label svg .line2 {
   stroke-dasharray: 60 60;
   stroke-width: 6;
 }
 
-nav .line3 {
+nav label svg .line3 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
 }
@@ -74,8 +68,8 @@ nav .opened .line3 {
   stroke-width: 6;
 }
 
-.navbar {
-  width: 99vw;
+nav .navbar {
+  width: 100vw;
   height: 3rem;
   background: rgba(240, 240, 240, 0.6);
   -webkit-backdrop-filter: saturate(180%) blur(10px);
@@ -85,9 +79,8 @@ nav .opened .line3 {
   transition: .2s ease-out;
 }
 
-.navbar div {
-  margin-left: 4vw;
-  margin-right: 4vw;
+nav .navbar div {
+  margin: 0 2vw;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,33 +93,32 @@ nav .opened .line3 {
           justify-content: center;
 }
 
-.navbar div #logo {
+nav .navbar div #logo {
   text-decoration: none;
   color: black;
 }
 
-.navbar div ul {
+nav .navbar div ul {
   margin: auto;
   padding: 0;
-  margin: 0;
   width: 80%;
   list-style: none;
   text-align: center;
 }
 
-.navbar div ul li {
+nav .navbar div ul li {
   padding-left: calc(30px + 5vw);
   display: inline;
   -webkit-transition: .3s ease-in;
   transition: .3s ease-in;
 }
 
-.navbar div ul li a {
+nav .navbar div ul li a {
   color: #555;
   text-decoration: none;
 }
 
-.navbar div ul li a:hover {
+nav .navbar div ul li a:hover {
   color: #000;
 }
 
