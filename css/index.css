@@ -222,8 +222,8 @@ nav .navbar div ul li a:hover {
     width: 60vw !important;
     height: 100vh;
     background-color: white;
-    -webkit-transition: .3s ease-in;
-    transition: .3s ease-in;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
   }
   .navbar ul li {
     padding-left: 5vw !important;
