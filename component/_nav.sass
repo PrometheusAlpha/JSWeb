@@ -1,0 +1,116 @@
+body
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+  background-color: #04293a
+  color: white
+  font-family: Google Sans
+nav
+  z-index: 9
+  top: 0
+  position: fixed
+  box-shadow: 0 0 20px #111
+  input
+    display: none
+  label
+    position: absolute
+    top: 15px
+    left: 12px
+    cursor: pointer
+    z-index: 2
+    opacity: 0
+  svg
+    height: 30px
+    width: 30px
+  .line
+    fill: none
+    stroke: white
+    stroke-width: 6
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1)
+  .line1
+    stroke-dasharray: 60 207
+    stroke-width: 6
+
+  .line2
+    stroke-dasharray: 60 60
+    stroke-width: 6
+
+  .line3
+    stroke-dasharray: 60 207
+    stroke-width: 6
+
+  .opened .line1
+    stroke-dasharray: 90 207
+    stroke-dashoffset: -134
+    stroke-width: 6
+
+  .opened .line2
+    stroke-dasharray: 1 60
+    stroke-dashoffset: -30
+    stroke-width: 6
+
+  .opened .line3
+    stroke-dasharray: 90 207
+    stroke-dashoffset: -134
+    stroke-width: 6
+.navbar
+  width: 100vw
+  height: 4rem
+  position: relative
+  background: #161b22
+  transition: .2s ease-out
+  padding: 0 2vw
+  div
+    margin: 0 2vw
+    width: 94vw
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-around
+  #logo
+    text-decoration: none
+    color: white
+  ul
+    background: #111827
+    padding: 0
+    width: 80%
+    list-style: none
+    text-align: center
+    li
+      padding-left: calc(30px + 4vw)
+      display: inline
+      transition: .3s ease-in
+      a
+        color: #bdc3c7
+        text-decoration: none
+      a:hover
+        color: #fff
+@media only screen and (max-width: 700px)
+    .navbar
+        ul
+            position: absolute
+            top: 3rem
+            left: -100vw
+            overflow: hidden
+            display: flex
+            height: 0
+            flex-direction: column
+            width: 60vw !important
+            height: 100vh
+            transition: .3s ease-in-out
+            box-shadow: 0 0 40px black
+            li
+                padding: 0 !important
+                text-align: left
+                border-bottom: 1px solid #dddddd
+                a
+                    padding: 5vw 0 5vw 5vw
+                    display: block
+    label
+        opacity: 1 !important
+    input:checked ~ .navbar
+        ul
+            left: 0
+            li
+                position: relative
+                text-align: left

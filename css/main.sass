@@ -1,0 +1,62 @@
+
+.article
+    padding-left: 11vw
+    font-size: calc(9px + 1vw)
+    width: 70vw
+    h1
+        margin: 1vw 0
+        font-size: calc(30px + 1vw)
+        line-height: calc(25px + 2vw)
+.landing
+    height: calc(50vw + 50vh)
+    width: 82vw
+    margin-top: 4rem
+    article
+        margin-top: calc(80px + 20vh)
+        a
+            display: inline-block
+            text-decoration: none
+            padding: 10px 20px
+            border-radius: 20px
+            color: black
+            background-color: #3498db
+            transition: .2s ease-in-out
+        a:hover
+            background: #e0f2fe
+    .bg
+        width: 80vw
+        height: 30vw
+        background: #3498db
+        transform: rotate(-2deg) translateY(13vw)
+        transform-origin: center
+        border-radius: 20px
+        z-index: -1
+    &__image
+        position: relative
+        top: -30vw
+        #hero1
+            position: absolute
+            top: 17vw
+            left: 7vw
+            width: 40vw
+            height: 20vw
+            object-fit: cover
+            z-index: 2
+            box-shadow: 10px -10px 30px #666
+            border-radius: 15px
+        #hero2
+            position: absolute
+            top: 7vw
+            right: 5vw
+            height: 44vw
+            border-radius: 15px
+
+.history
+    span
+        color: #d35400
+    a
+        text-decoration: none
+        color: #d35400
+    a:hover
+        color: #ff6600
+@import ../component/nav
