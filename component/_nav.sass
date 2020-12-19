@@ -1,10 +1,12 @@
 body
   margin: 0
   padding: 0
-  overflow-x: hidden
   background-color: #04293a
   color: white
   font-family: Google Sans
+  a
+    text-decoration: none
+    color: white
 nav
   z-index: 9
   font-size: 14px
@@ -27,8 +29,8 @@ nav
     fill: none
     stroke: white
     stroke-width: 6
-    transition: stroke-dasharray 200ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1)
-  .line1
+    transition: stroke-dasharray 200ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1)
+  .line1, .line3
     stroke-dasharray: 60 207
     stroke-width: 6
 
@@ -36,11 +38,7 @@ nav
     stroke-dasharray: 60 60
     stroke-width: 6
 
-  .line3
-    stroke-dasharray: 60 207
-    stroke-width: 6
-
-  .opened .line1
+  .opened .line1,.opened .line3
     stroke-dasharray: 90 207
     stroke-dashoffset: -134
     stroke-width: 6
@@ -49,22 +47,18 @@ nav
     stroke-dasharray: 1 60
     stroke-dashoffset: -30
     stroke-width: 6
-
-  .opened .line3
-    stroke-dasharray: 90 207
-    stroke-dashoffset: -134
-    stroke-width: 6
 .nav
   width: 100vw
   height: 4rem
   position: relative
   background: #161b22
   padding: 0 2vw
-  div
+  &_content
     width: 94vw
     display: flex
     align-items: center
     gap: 3rem
+    position: relative
   #logo
     font-size: 2rem
     text-decoration: none
@@ -72,17 +66,27 @@ nav
   &_buttons
     background: #161b22
     padding: 0
-    width: 80%
     list-style: none
     a
       padding: 0 20px
       line-height: calc(4rem - 2px)
       display: inline-block
       color: #bdc3c7
-      text-decoration: none
     a:hover
-      background-color: #2c3e50
+      background-color: #222b36
+#signin
+  position: absolute
+  right: 0
+  line-height: 4rem
+  padding: 0 10px
+#signin:hover
+  background-color: #222b36
+
 @media only screen and (max-width: 640px)
+  #logo
+    line-height: 4rem
+    display: inline-block
+    margin: auto
   .nav
     &_buttons
       position: absolute
@@ -92,19 +96,20 @@ nav
       display: flex
       height: 0
       flex-direction: column
-      width: 60vw !important
+      width: 40vw !important
       height: 100vh
       transition: .1s ease-in-out
       box-shadow: 0 0 40px black
       a
+        line-height: 1rem
         border-bottom: 1px solid #dddddd
-        padding: 5vw 0 5vw 5vw
+        padding: 1.5rem 0 1.5rem 2rem
         display: block
   label
     opacity: 1 !important
   input:checked ~ .nav
     .nav_buttons
-      left: 0
+      left: -10px
       a
         position: relative
         text-align: left

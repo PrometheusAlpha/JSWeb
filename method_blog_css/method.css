@@ -25,10 +25,14 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
   background-color: #04293a;
   color: white;
   font-family: Google Sans;
+}
+
+body a {
+  text-decoration: none;
+  color: white;
 }
 
 nav {
@@ -62,11 +66,11 @@ nav .line {
   fill: none;
   stroke: white;
   stroke-width: 6;
-  -webkit-transition: stroke-dasharray 200ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: stroke-dasharray 200ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: stroke-dasharray 200ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke-dasharray 200ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-nav .line1 {
+nav .line1, nav .line3 {
   stroke-dasharray: 60 207;
   stroke-width: 6;
 }
@@ -76,12 +80,7 @@ nav .line2 {
   stroke-width: 6;
 }
 
-nav .line3 {
-  stroke-dasharray: 60 207;
-  stroke-width: 6;
-}
-
-nav .opened .line1 {
+nav .opened .line1, nav .opened .line3 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
@@ -93,12 +92,6 @@ nav .opened .line2 {
   stroke-width: 6;
 }
 
-nav .opened .line3 {
-  stroke-dasharray: 90 207;
-  stroke-dashoffset: -134;
-  stroke-width: 6;
-}
-
 .nav {
   width: 100vw;
   height: 4rem;
@@ -107,7 +100,7 @@ nav .opened .line3 {
   padding: 0 2vw;
 }
 
-.nav div {
+.nav_content {
   width: 94vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,6 +109,7 @@ nav .opened .line3 {
       -ms-flex-align: center;
           align-items: center;
   gap: 3rem;
+  position: relative;
 }
 
 .nav #logo {
@@ -127,7 +121,6 @@ nav .opened .line3 {
 .nav_buttons {
   background: #161b22;
   padding: 0;
-  width: 80%;
   list-style: none;
 }
 
@@ -136,14 +129,29 @@ nav .opened .line3 {
   line-height: calc(4rem - 2px);
   display: inline-block;
   color: #bdc3c7;
-  text-decoration: none;
 }
 
 .nav_buttons a:hover {
-  background-color: #2c3e50;
+  background-color: #222b36;
+}
+
+#signin {
+  position: absolute;
+  right: 0;
+  line-height: 4rem;
+  padding: 0 10px;
+}
+
+#signin:hover {
+  background-color: #222b36;
 }
 
 @media only screen and (max-width: 640px) {
+  #logo {
+    line-height: 4rem;
+    display: inline-block;
+    margin: auto;
+  }
   .nav_buttons {
     position: absolute;
     top: 4rem;
@@ -157,7 +165,7 @@ nav .opened .line3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 60vw !important;
+    width: 40vw !important;
     height: 100vh;
     -webkit-transition: .1s ease-in-out;
     transition: .1s ease-in-out;
@@ -165,15 +173,16 @@ nav .opened .line3 {
             box-shadow: 0 0 40px black;
   }
   .nav_buttons a {
+    line-height: 1rem;
     border-bottom: 1px solid #dddddd;
-    padding: 5vw 0 5vw 5vw;
+    padding: 1.5rem 0 1.5rem 2rem;
     display: block;
   }
   label {
     opacity: 1 !important;
   }
   input:checked ~ .nav .nav_buttons {
-    left: 0;
+    left: -10px;
   }
   input:checked ~ .nav .nav_buttons a {
     position: relative;
