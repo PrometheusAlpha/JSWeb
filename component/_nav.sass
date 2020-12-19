@@ -1,18 +1,19 @@
 body
   margin: 0
   padding: 0
-  background-color: #04293a
-  color: white
+  background-color: #19252f
+  color: #d1d8e0
   font-family: Google Sans
+  overflow-x: hidden
   a
     text-decoration: none
-    color: white
+    color: #a5b1c2
 nav
   z-index: 9
   font-size: 14px
   top: 0
   position: fixed
-  box-shadow: 0 0 20px #111
+  box-shadow: 0 0 5px #111
   input
     display: none
   label
@@ -51,7 +52,7 @@ nav
   width: 100vw
   height: 4rem
   position: relative
-  background: #161b22
+  background:#243640
   padding: 0 2vw
   &_content
     width: 94vw
@@ -64,7 +65,7 @@ nav
     text-decoration: none
     color: white
   &_buttons
-    background: #161b22
+    background: #243640
     padding: 0
     list-style: none
     a
@@ -73,14 +74,15 @@ nav
       display: inline-block
       color: #bdc3c7
     a:hover
-      background-color: #222b36
+      background-color: #273d52
 #signin
+  color: #fff
   position: absolute
   right: 0
   line-height: 4rem
-  padding: 0 10px
+  padding: 0 20px
 #signin:hover
-  background-color: #222b36
+  background-color:  #273d52
 
 @media only screen and (max-width: 640px)
   #logo
@@ -99,7 +101,7 @@ nav
       width: 40vw !important
       height: 100vh
       transition: .1s ease-in-out
-      box-shadow: 0 0 40px black
+      box-shadow: 0 40px 40px black
       a
         line-height: 1rem
         border-bottom: 1px solid #dddddd
@@ -109,7 +111,7 @@ nav
     opacity: 1 !important
   input:checked ~ .nav
     .nav_buttons
-      left: -10px
+      left: -11px
       a
         position: relative
         text-align: left

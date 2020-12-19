@@ -107,14 +107,15 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #04293a;
-  color: white;
+  background-color: #19252f;
+  color: #d1d8e0;
   font-family: Google Sans;
+  overflow-x: hidden;
 }
 
 body a {
   text-decoration: none;
-  color: white;
+  color: #a5b1c2;
 }
 
 nav {
@@ -122,8 +123,8 @@ nav {
   font-size: 14px;
   top: 0;
   position: fixed;
-  -webkit-box-shadow: 0 0 20px #111;
-          box-shadow: 0 0 20px #111;
+  -webkit-box-shadow: 0 0 5px #111;
+          box-shadow: 0 0 5px #111;
 }
 
 nav input {
@@ -178,7 +179,7 @@ nav .opened .line2 {
   width: 100vw;
   height: 4rem;
   position: relative;
-  background: #161b22;
+  background: #243640;
   padding: 0 2vw;
 }
 
@@ -201,7 +202,7 @@ nav .opened .line2 {
 }
 
 .nav_buttons {
-  background: #161b22;
+  background: #243640;
   padding: 0;
   list-style: none;
 }
@@ -214,18 +215,19 @@ nav .opened .line2 {
 }
 
 .nav_buttons a:hover {
-  background-color: #222b36;
+  background-color: #273d52;
 }
 
 #signin {
+  color: #fff;
   position: absolute;
   right: 0;
   line-height: 4rem;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 #signin:hover {
-  background-color: #222b36;
+  background-color: #273d52;
 }
 
 @media only screen and (max-width: 640px) {
@@ -251,8 +253,8 @@ nav .opened .line2 {
     height: 100vh;
     -webkit-transition: .1s ease-in-out;
     transition: .1s ease-in-out;
-    -webkit-box-shadow: 0 0 40px black;
-            box-shadow: 0 0 40px black;
+    -webkit-box-shadow: 0 40px 40px black;
+            box-shadow: 0 40px 40px black;
   }
   .nav_buttons a {
     line-height: 1rem;
@@ -264,7 +266,7 @@ nav .opened .line2 {
     opacity: 1 !important;
   }
   input:checked ~ .nav .nav_buttons {
-    left: -10px;
+    left: -11px;
   }
   input:checked ~ .nav .nav_buttons a {
     position: relative;
