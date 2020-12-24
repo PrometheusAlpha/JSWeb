@@ -1,73 +1,54 @@
-
-.article
-    padding-left: 11vw
-    font-size: calc(9px + 1vw)
-    width: 65vw
-    h1
-        margin: 1vw 0
-        font-size: calc(30px + 1vw)
-        line-height: calc(25px + 2vw)
-.landing
-    height: calc(50vw + 50vh)
-    width: 70vw
-    margin-top: 4rem
-    article
-        margin-top: calc(80px + 20vh)
-        a
-            display: inline-block
-            text-decoration: none
-            padding: 10px 20px
-            border-radius: 20px
-            color: black
-            background-color: #3498db
-            transition: .2s ease-in-out
-        a:hover
-            background: #e0f2fe
-    .bg
-        width: 80vw
-        height: 30vw
-        background: #3498db
-        transform: rotate(-2deg) translateY(13vw)
-        transform-origin: center
-        border-radius: 20px
-        z-index: -1
-    &__image
-        position: relative
-        top: -30vw
-        #hero1
-            position: absolute
-            top: 19vw
-            left: 5vw
-            width: 35vw
-            height: 20vw
-            object-fit: cover
-            z-index: 2
-            box-shadow: 5px -5px 10px #777
-            border-radius: 15px
-        #hero2
-            position: absolute
-            top: 5vw
-            right: -7vw
-            height: 44vw
-            border-radius: 15px
-
-.history
-    span
-        color: #d35400
-    a
-        background: #d35400
-        color: #000
-        padding: 10px 20px
+.blog
+  text-align: center
+  margin-top: 6rem
+  h1
+    font-size: 3rem
+  .card__container
+    margin-top: 60px
+    text-align: left
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr))
+    gap: 20px
+    padding: 0 calc(2vw + 2vh)
+    .card
+      height: 0
+      padding-bottom: 120%
+      box-sizing: border-box
+      position: relative
+      a
+        display: block
+        height: 0
+        padding-bottom: 120%
+        background-color: #202124
+      &__image
+        object-fit: cover
+        clip-path: polygon(100% 0, 100% 68%, 0 68%, 0 0)
+        margin-bottom: -30%
+        transition: .2s ease-in-out
+        img
+          transition: .2s ease-in-out
+      &__tag
+        padding: 5px 10px
         border-radius: 15px
-        position: relative
-        transition: .1s ease-in-out
-        i
-            margin-left: -33px
-            opacity: 0
-            transition: .1s ease-in-out
-    a:hover
-        padding: 10px 10px
-        i
-            margin-left: 0
-            opacity: 1
+        border: 1px solid white
+      &__tag:hover
+        background-color: #212B45
+      &__desc
+        display: block
+        margin: 40px 20px
+      .bg
+        position: absolute
+    .card::after
+      content: ''
+      position: absolute
+      top: -3px
+      left: -3px
+      height: calc(100% + 3px * 2)
+      width: calc(100% + 3px * 2)
+      background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)
+      border-radius: calc(2 * 3px)
+      z-index: -1
+      animation: animatedgradient 3s ease alternate infinite
+      background-size: 300% 300%
+    .card:hover
 @import ../component/nav

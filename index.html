@@ -7,67 +7,140 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <nav>
-      <input type="checkbox" id="nav_button" />
-      <label
-        for="nav_button"
-        id="nav"
-        class="menu"
-        onclick="this.classList.toggle('opened')"
-      >
-        <svg width="100" height="100" viewBox="0 0 100 100">
-          <path
-            class="line line1"
-            d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
-          />
-          <path class="line line2" d="M 20,50 H 80" />
-          <path
-            class="line line3"
-            d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
-          />
-        </svg>
-      </label>
-      <section class="nav">
-        <div class="nav_content">
-          <a href="#" id="logo"><b>Origami</b></a>
-          <section class="nav_buttons">
-            <a href="history_blog.html">Lịch sử </a>
-            <a href="method_blog.html">Cách thức gấp Origami</a>
-            <a href="application_blog.html">Ứng dụng</a>
-          </section>
-          <a href="" id="signin">SIGN IN</a>
-        </div>
+    <nav w3-include-html="nav.html"></nav>
+    <section class="blog">
+      <h1>Blog</h1>
+      <p>Tin tức, cập nhật và câu chuyện mới nhất của chúng tôi dành cho</p>
+      <section class="card__container">
+        <article class="card" onmouseover="expand()">
+          <a href="#">
+            <div class="card__image">
+              <img
+                src="Image/history-origami.jpg"
+                loading="lazy"
+                width="100%"
+              />
+              <img
+                src="Image/history-origami.jpg"
+                loading="lazy"
+                width="100%"
+                class = "bg"
+              />
+            </div>
+            <article class="card__desc">
+              <h2>Schemeful Same-Site</h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              eos.
+            </article>
+          </a>
+        </article>
+        <article class="card" onmouseover="expand()">
+          <a href="#">
+            <div class="card__image">
+              <img
+                src="Image/history-origami.jpg"
+                loading="lazy"
+                width="100%"
+              />
+              <img
+                src="Image/history-origami.jpg"
+                loading="lazy"
+                width="100%"
+                class = "bg"
+              />
+            </div>
+            <article class="card__desc">
+              <h2>Schemeful Same-Site</h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              eos.
+            </article>
+            
+          </a>
+          
+        </article>
+        <article class="card" onmouseover="expand()">
+          <a href="#">
+            <div class="card__image">
+              <img
+                src="Image/history-origami.jpg"
+                loading="lazy"
+                width="100%"
+              />
+              <img
+                src="Image/history-origami.jpg"
+                loading="lazy"
+                width="100%"
+                class = "bg"
+              />
+            </div>
+            <article class="card__desc">
+              <h2>Schemeful Same-Site</h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              eos.
+            </article>
+          </a>
+        </article>
+        <article class="card" onmouseover="expand()">
+          <a href="#">
+            <div class="card__image">
+              <img
+                src="Image/history-origami.jpg"
+                loading="lazy"
+                width="100%"
+              />
+              <img
+                src="Image/history-origami.jpg"
+                loading="lazy"
+                width="100%"
+                class = "bg"
+              />
+            </div>
+            <article class="card__desc">
+              <h2>Schemeful Same-Site</h2>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+              eos.
+            </article>
+          </a>
+        </article>
       </section>
-    </nav>
-    <section class="landing article">
-      <article>
-        <h1>Xin chào! Chào mừng đến với Origami.me</h1>
-        <span
-          >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
-          illum quos cumque aperiam. Facilis dolorem quisquam delectus nam,
-          magni quod porro soluta sapiente illum nulla nostrum, nesciunt
-          aspernatur quasi perferendis.
-        </span>
-        <br />
-        <br />
-      </article>
-      <div class="bg"></div>
-      <div class="landing__image">
-        <img src="Image/paper_flower.jpg" id="hero1" alt="" />
-        <img src="Image/crease_pattern.jpg" alt="" id="hero2" />
-      </div>
     </section>
-    <section class="history article">
-      <span> Lịch sử </span>
-      <h1>Quay ngược dòng thời gian</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
-        ratione deleniti atque nesciunt, itaque soluta error pariatur quisquam
-        esse. Molestias nulla perspiciatis pariatur animi unde nostrum alias sed
-        ut asperiores.
-      </p>
-      <br />
-      <a href="">Tìm hiểu <i>→</i></a>
-    </section>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam aliquid
+      saepe eius omnis quae neque esse pariatur est, tenetur quibusdam velit
+      vero voluptates nesciunt, quaerat rem porro non officia ea harum vitae
+      assumenda placeat ad provident dolor? Nihil tenetur recusandae in nemo
+      minima laudantium et fugit modi soluta nam necessitatibus perferendis
+      sunt, deleniti, porro esse id eveniet alias sed eum autem. Ullam
+      voluptatibus laudantium accusamus nisi eum ducimus non molestias iusto
+      sunt similique! Rerum velit, doloribus labore mollitia veritatis quod.
+      Soluta expedita ipsum tempora temporibus saepe, repellat deserunt
+      quibusdam illo ex. Voluptas libero quibusdam, voluptates hic doloribus aut
+      culpa ab assumenda consequatur labore dicta doloremque. Accusantium
+      excepturi rem, iste et unde, mollitia, ab sapiente maiores quae inventore
+      nostrum vitae maxime veritatis consequuntur magni! Itaque nobis ipsa
+      dolores ipsam odio expedita aspernatur, fugiat ex quas! Molestias laborum
+      tempore nisi, debitis delectus perspiciatis vel vitae consequatur
+      accusantium architecto enim nihil ducimus ad cumque voluptatibus deleniti
+      asperiores. Doloremque blanditiis molestias a, dolor aliquam nam est eum
+      voluptatibus magni nulla atque ipsam consequatur enim alias labore illum
+      illo, dicta pariatur dignissimos veniam perspiciatis sapiente! Ullam magni
+      perferendis, accusantium repudiandae at iusto? Sint vero enim nam
+      temporibus eum. Ad laborum illum quas tempore voluptate ea quae, doloribus
+      aliquid inventore corporis quod veniam iure labore adipisci alias
+      asperiores consequuntur. Est quasi, laborum corrupti voluptatum corporis
+      voluptatibus repellat officiis nam, vero odio, sint ratione itaque quos.
+      Nostrum velit ipsam voluptatum incidunt est porro, eligendi dolor sequi,
+      aliquam autem aspernatur consequuntur nemo? Optio veritatis velit, sunt
+      inventore labore ipsam quidem nemo dicta, maxime eligendi quasi
+      repudiandae atque rem reiciendis ullam autem nihil? Libero labore
+      assumenda, animi, consequatur voluptatem aut tenetur tempora obcaecati
+      perferendis, sit ea iusto commodi ipsum accusamus quasi amet eaque! Eum
+      culpa voluptate accusamus nobis tempora quia, perferendis sequi vero,
+      laborum sint consequuntur, deleniti impedit debitis.
+    </p>
+    <script src="nav.js"></script>
+    <script>
+      includeHTML();
+    </script>
   </body>
 </html>

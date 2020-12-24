@@ -1,19 +1,19 @@
 body
   margin: 0
   padding: 0
-  background-color: #19252f
-  color: #d1d8e0
+  background-color: #202124
+  color: #fff
   font-family: Google Sans
   overflow-x: hidden
   a
     text-decoration: none
-    color: #a5b1c2
+    color: #fff
 nav
   z-index: 9
   font-size: 14px
   top: 0
   position: fixed
-  box-shadow: 0 0 5px #111
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.4),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.2)
   input
     display: none
   label
@@ -52,7 +52,7 @@ nav
   width: 100vw
   height: 4rem
   position: relative
-  background:#243640
+  background:#202124
   padding: 0 2vw
   &_content
     width: 94vw
@@ -61,20 +61,27 @@ nav
     gap: 3rem
     position: relative
   #logo
+    width: 130px
     font-size: 2rem
     text-decoration: none
     color: white
+    text-align: center
+  #logo__disappear
+    display: inline
+    margin: 0
+    transition: .2s ease-in-out
   &_buttons
-    background: #243640
+    background: #202124
     padding: 0
     list-style: none
     a
+      margin: 0 -1.2px
       padding: 0 20px
-      line-height: calc(4rem - 2px)
+      line-height: 4rem
       display: inline-block
       color: #bdc3c7
     a:hover
-      background-color: #273d52
+      background-color: #31313b
 #signin
   color: #fff
   position: absolute
@@ -82,7 +89,30 @@ nav
   line-height: 4rem
   padding: 0 20px
 #signin:hover
-  background-color:  #273d52
+  background-color: #31313b
+.content
+  img
+    width: 100vw
+    height: calc(35vw + 4rem)
+    object-fit: cover
+  .article
+    max-width: 800px
+    padding: 0 30px
+    margin: auto
+    font-size: 16px
+    line-height: 32px
+    h1
+      font-size: 3rem
+      line-height: 3.2rem
+@keyframes animatedgradient
+  0%
+    background-position: 0% 50%
+
+  50%
+    background-position: 100% 50%
+
+  100%
+    background-position: 0% 50%
 
 @media only screen and (max-width: 640px)
   #logo
@@ -94,13 +124,12 @@ nav
       position: absolute
       top: 4rem
       left: -100vw
-      overflow: hidden
       display: flex
       height: 0
       flex-direction: column
-      width: 40vw !important
+      width: 50vw !important
       height: 100vh
-      transition: .1s ease-in-out
+      transition: .2s ease-in-out
       box-shadow: 0 40px 40px black
       a
         line-height: 1rem
