@@ -1,28 +1,30 @@
 .blog
-  text-align: center
   margin-top: 6rem
-  h1
-    font-size: 3rem
+  b
+    margin-left: calc(2vw + 2vh)
+    font-size: 1.6rem
+  p
+    display: inline
   .card__container
-    margin-top: 60px
+    margin-top: 50px
     text-align: left
     display: grid
     grid-template-columns: repeat(auto-fit, minmax(310px, 1fr))
-    gap: 20px
-    padding: 0 calc(2vw + 2vh)
+    gap: 40px
+    padding: 0 calc(3vw + 3vh)
     .card
       height: 0
-      padding-bottom: 120%
+      padding-bottom: 110%
       box-sizing: border-box
       position: relative
       a
         display: block
         height: 0
-        padding-bottom: 120%
+        padding-bottom: 110%
         background-color: #202124
       &__image
         object-fit: cover
-        clip-path: polygon(100% 0, 100% 68%, 0 68%, 0 0)
+        clip-path: polygon(100% 0, 100% 70%, 0 70%, 0 0)
         margin-bottom: -30%
         transition: .2s ease-in-out
         img
