@@ -1,7 +1,7 @@
 body
   margin: 0
   padding: 0
-  background-color: #202124
+  background-color: #172b3d
   color: #fff
   font-family: Google Sans
   overflow-x: hidden
@@ -13,7 +13,6 @@ nav
   font-size: 14px
   top: 0
   position: fixed
-  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.4),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.2)
   input
     display: none
   label
@@ -49,17 +48,17 @@ nav
     stroke-dashoffset: -30
     stroke-width: 6
 .nav
-  width: 100vw
+  border-radius: 0 0 1rem 1rem
+  margin-left: calc(48vw - 425px)
+  width: 850px
   height: 4rem
   position: relative
-  background:#202124
+  background: #31363B
   padding: 0 2vw
-  &_content
-    width: 94vw
-    display: flex
-    align-items: center
-    gap: 3rem
-    position: relative
+  display: flex
+  align-items: center
+  gap: 3rem
+  position: relative
   #logo
     width: 130px
     font-size: 2rem
@@ -71,7 +70,7 @@ nav
     margin: 0
     transition: .2s ease-in-out
   &_buttons
-    background: #202124
+    background: #31363B
     padding: 0
     list-style: none
     a
@@ -81,7 +80,7 @@ nav
       display: inline-block
       color: #bdc3c7
     a:hover
-      background-color: #31313b
+      background-color: #111
 #signin
   color: #fff
   position: absolute
@@ -89,7 +88,7 @@ nav
   line-height: 4rem
   padding: 0 20px
 #signin:hover
-  background-color: #31313b
+  background-color: #111
 .content
   img
     width: 100vw
@@ -114,12 +113,14 @@ nav
   100%
     background-position: 0% 50%
 
-@media only screen and (max-width: 640px)
+@media only screen and (max-width: 900px)
   #logo
     line-height: 4rem
     display: inline-block
     margin: auto
   .nav
+    width: 94vw !important
+    margin-left: 0
     &_buttons
       position: absolute
       top: 4rem
