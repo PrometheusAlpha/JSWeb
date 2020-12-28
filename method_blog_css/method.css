@@ -16,6 +16,11 @@ body a {
   color: #fff;
 }
 
+@font-face {
+  font-family: Google Sans;
+  src: url(GoogleSans-Medium.ttf);
+}
+
 nav {
   width: 100vw;
   z-index: 9;
