@@ -109,7 +109,7 @@ nav .opened .line2 {
 
 .nav #logo__disappear {
   display: inline;
-  margin: 1px;
+  margin: 2px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
 }
