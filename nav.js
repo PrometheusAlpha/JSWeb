@@ -27,7 +27,7 @@ function includeHTML() {
 }
 window.onscroll = function(e) {
   var logo = document.getElementById('logo__disappear');
-
+  
   if(this.oldScroll < this.scrollY){
     logo.style.marginRight='-6rem';
     logo.style.opacity='0';
@@ -39,3 +39,4 @@ window.onscroll = function(e) {
 
   this.oldScroll = this.scrollY;
 }
+document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
