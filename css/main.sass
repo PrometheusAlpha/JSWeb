@@ -2,8 +2,6 @@
   position: relative
   margin-top: 4rem
   padding-top: 2rem
-  b,h2
-    color: white
   p
     margin-left: calc(2vw + 2vh)
     color: #bac1c8
@@ -17,12 +15,13 @@
     flex-wrap: wrap
     a
       width: 43vw
-      margin-bottom: 40px
       border-radius: 20px
       height: 35vh
       display: flex
       overflow: hidden
       background-color: #273d52
+      // 
+      margin-bottom: 40px
     .card__image
       width: 33%
     img
@@ -30,17 +29,30 @@
       object-fit: cover
     .card__desc
       color: #bac1c8
-      padding: 10px
+      padding: 10px 20px
       display: block
+      p
+        padding: 5px 10px
+        border-radius: 15px
+        font-size: 12px
+        display: inline-block
+        background-color: rgba(225,225,225,0.1)
+        // 
+        margin: 5px 0 -2px 0
   svg
     position: absolute
     top: 1.4rem
     z-index: -5
     opacity: 0.6
 @import ../component/nav
-@media only screen and (max-width: 830px)
+@media only screen and (max-width: 500px)
   .card__container
     a
       width: 90vw !important
-    .card__image
-      width: 100%
+      flex-direction: column-reverse
+      .card_desc
+        height: 18vh !important
+@media only screen and (max-width: 780px)
+  .card__container    
+    a
+      width: 90vw !important

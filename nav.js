@@ -39,4 +39,13 @@ window.onscroll = function(e) {
 
   this.oldScroll = this.scrollY;
 }
-document.documentElement.style.setProperty('--scrollbar-width', (window.innerWidth - document.documentElement.clientWidth) + "px");
+
+function showname(i) {
+  var p =document.getElementById('desc');
+  p.innerHTML = i;
+}
+function hidename() {
+  var p =document.getElementById('desc');
+  p.innerHTML = "Hover or click in avatar";
+}
+
