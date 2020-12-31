@@ -9,15 +9,19 @@ function includeHTML() {
     if (file) {
       /* Make an HTTP request using the attribute value as the file name: */
       xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
+      xhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          if (this.status == 200) {
+            elmnt.innerHTML = this.responseText;
+          }
+          if (this.status == 404) {
+            elmnt.innerHTML = "Page not found.";
+          }
           /* Remove the attribute, and call this function once more: */
           elmnt.removeAttribute("w3-include-html");
           includeHTML();
         }
-      }
+      };
       xhttp.open("GET", file, true);
       xhttp.send();
       /* Exit the function: */
@@ -25,27 +29,26 @@ function includeHTML() {
     }
   }
 }
-window.onscroll = function(e) {
-  var logo = document.getElementById('logo__disappear');
-  
-  if(this.oldScroll < this.scrollY){
-    logo.style.marginRight='-6rem';
-    logo.style.opacity='0';
-  }
-  else{
-    logo.style.marginRight='0';
-    logo.style.opacity='1';
+window.onscroll = function (e) {
+  var logo = document.getElementById("logo__disappear");
+
+  if (this.oldScroll < this.scrollY) {
+    logo.style.marginRight = "-6rem";
+    logo.style.opacity = "0";
+  } else {
+    logo.style.marginRight = "0";
+    logo.style.opacity = "1";
   }
 
   this.oldScroll = this.scrollY;
-}
+};
 
 function showname(i) {
-  var p =document.getElementById('desc');
+  var p = document.getElementById("desc");
   p.innerHTML = i;
 }
 function hidename() {
-  var p =document.getElementById('desc');
+  var p = document.getElementById("desc");
   p.innerHTML = "Hover or click in avatar";
 }
 
