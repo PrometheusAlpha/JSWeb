@@ -41,7 +41,9 @@
   height: 40vh
   color: #bac1c8
   padding: 10px 20px
-  display: block
+  display: flex
+  flex-direction: column
+  justify-content: space-between
   p
     padding: 5px 10px
     border-radius: 15px
@@ -55,6 +57,16 @@
     width: 10px
     z-index: 3
     opacity: 0.6
+.author
+  display: flex
+  align-items: center
+  img
+    padding: 0 5px
+    width: 10vw
+    max-width: 40px
+    height: 10vw
+    max-height: 40px
+    border-radius: 50%
 .side
   &__card
     position: sticky
