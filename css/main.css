@@ -58,7 +58,8 @@
 }
 
 .popular-articles {
-  margin: 4vw;
+  padding: 1rem 0.5rem;
+  margin: 2vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,7 +72,7 @@
 
 .popular-articles .popular-header-card {
   height: 54vh;
-  width: 250px;
+  width: 175px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,7 +86,7 @@
           justify-content: flex-end;
   background: #000;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1.5rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -93,7 +94,7 @@
 
 .popular-articles .popular-header-card h1 {
   line-height: 1;
-  max-width: 10vw;
+  font-size: clamp(1.8rem, calc(1.8rem + .2vw), 3rem);
 }
 
 .popular-articles .popular-header-card::before {
@@ -189,11 +190,11 @@
 }
 
 .foot {
-  width: 99vw;
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 2.25rem 2.25rem 0 0;
-  height: 300px;
+  height: 15rem;
   padding: 16px 4vw;
   display: block;
   background: #3e536d;
@@ -251,6 +252,10 @@
   border-radius: 50%;
 }
 
+html {
+  font-size: clamp(12px, calc(.7rem + .25vw), 20px);
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -266,7 +271,7 @@ body a {
 }
 
 nav {
-  width: 100vw;
+  width: 100%;
   z-index: 9;
   font-size: 14px;
   top: 0;
@@ -289,8 +294,8 @@ nav label {
 }
 
 nav svg {
-  height: 40px;
-  width: 40px;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 nav svg .line {
@@ -367,10 +372,14 @@ nav .opened .line2 {
 
 #signin {
   color: #4ccb70;
-  width: 40px;
-  padding: 10px 20px;
+  width: 2rem;
+  padding: 0px 20px;
   position: absolute;
   right: 0;
+}
+
+#signin svg {
+  width: 2.5rem;
 }
 
 #totop {
@@ -446,6 +455,43 @@ nav .opened .line2 {
   .content .article {
     width: calc(100% - 58px);
   }
+  .mini-card {
+    -webkit-box-flex: 0 !important;
+        -ms-flex: 0 0 200px !important;
+            flex: 0 0 200px !important;
+  }
+  .mini-card:hover {
+    -webkit-transform: translateY(-7px) !important;
+            transform: translateY(-7px) !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    display: block;
+  }
+  .wrapper .card__container a {
+    width: 100% !important;
+  }
+  .wrapper .side {
+    display: none;
+  }
+  .hero {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .hero__img::after {
+    display: none;
+  }
+  .hero img {
+    width: 120%;
+  }
+  .hero figcaption {
+    padding: 18px;
+  }
+  .popular-articles {
+    overflow-x: scroll;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -461,21 +507,13 @@ nav .opened .line2 {
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .mini-card {
-    -webkit-box-flex: 0 !important;
-        -ms-flex: 0 0 220px !important;
-            flex: 0 0 220px !important;
-  }
-  .mini-card:hover {
-    -webkit-transform: translateY(-7px) !important;
-            transform: translateY(-7px) !important;
-  }
-}
-
 @media only screen and (max-width: 500px) {
-  .mini-card-container {
-    overflow-x: scroll;
+  .wrapper {
+    padding: 2px;
+  }
+  .card__container {
+    -ms-grid-columns: repeat();
+        grid-template-columns: repeat();
   }
   .card__container a {
     width: 90vw !important;
@@ -486,12 +524,6 @@ nav .opened .line2 {
   }
   .card__container a .card_desc {
     height: 18vh !important;
-  }
-}
-
-@media only screen and (max-width: 780px) {
-  .card__container a {
-    width: 90vw !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

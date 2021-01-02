@@ -52,3 +52,7 @@ function hidename() {
   p.innerHTML = "Hover or click in avatar";
 }
 
+function back(){
+  window.history.back();
+}
+

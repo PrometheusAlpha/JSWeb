@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="category_css/category.css">
+    <link rel="stylesheet" href="category_css/category.css" />
   </head>
   <body>
     <nav w3-include-html="nav.html" id="nav"></nav>
@@ -13,12 +13,25 @@
         <b class="purple">Lịch sử &nbsp &nbsp </b> Tin tức, cập nhật và câu
         chuyện mới nhất của chúng tôi dành cho
       </p>
-      <section class="card__container">
-        <a href="" w3-include-html="card.html"> </a>
-        <a href="" w3-include-html="card.html"> </a>
-        <a href="" w3-include-html="card.html"> </a>
-        <a href="" w3-include-html="card.html"> </a>
-      </section>
+      <div class="wrapper">
+        <section class="card__container">
+          <a href="" w3-include-html="card.html" class="card"> </a>
+          <a href="" w3-include-html="card.html" class="card"> </a>
+          <a href="" w3-include-html="card.html" class="card"> </a>
+          <a href="" w3-include-html="card.html" class="card"> </a>
+        </section>
+        <section class="side">
+          <article class="side__card">
+            <h1>Lịch sử Origami</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+              ipsum vitae praesentium libero adipisci quo cupiditate temporibus
+              tempora nobis odio iste explicabo amet distinctio reiciendis
+              laudantium in accusamus, eum quasi.
+            </p>
+          </article>
+        </section>
+      </div>
     </section>
     <footer w3-include-html="footer.html" class="foot"></footer>
     <script src="nav.js"></script>

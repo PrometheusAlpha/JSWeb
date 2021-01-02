@@ -52,29 +52,43 @@
       height: 40vw
     .article
       width: calc(100% - 58px)
+  .mini-card
+    flex: 0 0 200px !important
+  .mini-card:hover
+    transform: translateY(-7px) !important
+@media only screen and (max-width: 768px)
+  .wrapper
+    display: block
+    .card__container
+      a
+        width: 100% !important
+    .side
+      display: none
+  .hero
+    grid-template-columns: 1fr
+    &__img::after
+      display: none
+    img
+      width: 120%
+    figcaption
+      padding: 18px
+  .popular-articles
+    overflow-x: scroll
 @media only screen and (max-width: 640px)
   .content
     width: 100%
     margin-left: 0
   .path
-    width: 100% 
+    width: 100%
   #desc
     display: none !important
-@media only screen and (max-width: 1200px)
-  .mini-card
-    flex: 0 0 220px !important
-  .mini-card:hover
-    transform: translateY(-7px) !important
 @media only screen and (max-width: 500px)
-  .mini-card-container
-    overflow-x: scroll
+  .wrapper
+    padding: 2px
   .card__container
+    grid-template-columns: repeat()
     a
       width: 90vw !important
       flex-direction: column-reverse
       .card_desc
         height: 18vh !important
-@media only screen and (max-width: 780px)
-  .card__container
-    a
-      width: 90vw !important

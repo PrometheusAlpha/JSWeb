@@ -37,26 +37,27 @@ $gradient: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%)
     padding: 3rem
     align-items: start
 .popular-articles
-  margin: 4vw
+  padding: 1rem 0.5rem
+  margin: 2vw
   display: flex
   gap: 2rem
   a:hover
     color: #ddd
   .popular-header-card
     height: 54vh
-    width: 250px
+    width: 175px
     display: flex
     margin-left: 1rem
     flex-direction: column
     justify-content: flex-end
     background: #000
     border-radius: 12px
-    padding: 2rem
+    padding: 1.5rem
     box-sizing: border-box
     position: relative
     h1
       line-height: 1
-      max-width: 10vw
+      font-size: clamp(1.8rem,calc(1.8rem + .2vw),3rem)
   .popular-header-card::before
     content: ""
     background: linear-gradient(130deg,#ff7a18,#af002d 41.07%,#319197 76.05%)

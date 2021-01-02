@@ -4,48 +4,59 @@
   margin-top: 4rem
   padding-top: 2rem
   p
-    margin-left: calc(2vw + 2vh)
     color: #bac1c8
   b
     font-size: 1.6rem
-  .card__container
-    margin-top: 50px
-    text-align: left
-    display: flex
-    justify-content: space-evenly
-    flex-wrap: wrap
-    a
-      width: 43vw
-      border-radius: 20px
-      height: 35vh
-      display: flex
-      overflow: hidden
-      background-color: #273d52
+.wrapper
+  display: grid
+  grid-template-columns: minmax(0,1fr) 300px
+  gap: 3rem
+  padding: 3rem
+.card__container
+  margin: 0 0 3rem
+  text-align: left
+  display: grid
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr))
+  gap: 3rem
+  flex-wrap: wrap
+.card
+  border-radius: 10px
+  height: 80vh
+  display: flex
+  flex-direction: column-reverse
+  overflow: hidden
+  background-color: #273d52
       // 
-      margin-bottom: 40px
-    .card__image
-      width: 33%
-    img
-      height: 100%
-      object-fit: cover
-    .card__desc
-      color: #bac1c8
-      padding: 10px 20px
-      display: block
-      p
-        padding: 5px 10px
-        border-radius: 15px
-        font-size: 12px
-        display: inline-block
-        background-color: rgba(225,225,225,0.1)
+  margin-bottom: 40px
+.card__image
+  height: 40vh
+  overflow: hidden
+  img
+    height: 100%
+    width: 100%
+    object-fit: cover
+.card__desc
+  height: 40vh
+  color: #bac1c8
+  padding: 10px 20px
+  display: block
+  p
+    padding: 5px 10px
+    border-radius: 15px
+    font-size: .8rem
+    display: inline-block
+    background-color: rgba(225,225,225,0.1)
         // 
-        margin: 5px 0 -2px 0
-      svg
-        position: sticky
-        width: 10px
-        z-index: 3
+    margin: 5px 0 -2px 0
   svg
-    position: absolute
-    top: 1.4rem
-    z-index: -5
+    position: sticky
+    width: 10px
+    z-index: 3
     opacity: 0.6
+.side
+  &__card
+    background: #111111
+    padding: 1rem
+    border-radius: 1rem
+    position: sticky
+    top: 5rem
