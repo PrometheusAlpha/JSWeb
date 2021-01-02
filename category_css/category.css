@@ -175,6 +175,10 @@ nav .opened .line2 {
   font-size: 1.6rem;
 }
 
+.blog .headline {
+  margin-left: 2rem;
+}
+
 .wrapper {
   display: -ms-grid;
   display: grid;
@@ -248,12 +252,28 @@ nav .opened .line2 {
 }
 
 .side__card {
-  background: #111111;
-  padding: 1rem;
-  border-radius: 1rem;
   position: -webkit-sticky;
   position: sticky;
   top: 5rem;
+  z-index: 1;
+}
+
+.side__card__content {
+  border-radius: 1.3rem;
+  padding: 1rem;
+  background: #000;
+}
+
+.side__card::before {
+  content: ' ';
+  position: absolute;
+  top: -2px;
+  left: -3px;
+  height: calc(100% + 6px);
+  width: calc(100% + 6px);
+  background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
+  z-index: -4;
+  border-radius: 1.3rem;
 }
 
 .foot {
